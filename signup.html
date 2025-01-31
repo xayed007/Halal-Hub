@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<div class="container">
+  <h1>Registration Form</h1>
+  <form action="#">
+      <div class="user_details">
+          <div class="input_box">
+              <span class="details">Full Name</span>
+              <input type="text" id="fname" required name="fullname" placeholder="Enter your name">
+          </div>
+          <div class="input_box">
+              <span class="details">Username</span>
+              <input type="text" id="username" required name="username" placeholder="Enter your username">
+          </div>
+          <div class="input_box">
+              <span class="details">Email</span>
+              <input type="email" id="email" required name="email" placeholder="Enter your email">
+          </div>
+          <div class="input_box">
+              <span class="details">Phone Number</span>
+              <input type="number" id="number" required name="phn_number" placeholder="Enter your number">
+          </div>
+          <div class="input_box">
+              <span class="details">Password</span>
+              <input type="password" id="pass" required name="password" placeholder="Enter your password">
+          </div>
+          <div class="input_box">
+              <span class="details">Confirm Password</span>
+              <input type="password" id="conpasss" required name="confirm_password" placeholder="Confirm your password">
+          </div>
+      </div>
+      <div class="gender-details">
+          <span class="title">Gender</span>
+          <div class="category">
+              <input type="radio" id="male" name="sex" value="Male">
+              <label for="male" class="dot">Male</label>
+              <input type="radio" id="female" name="sex" value="Female">
+              <label for="female" class="dot">Female</label>
+              <input type="radio" id="other" name="sex" value="Others">
+              <label for="other" class="dot">Others</label>
+          </div>
+      </div>
+      <div class="button">
+          <input type="submit" id="submit" value="Registration">
+      </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
