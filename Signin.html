@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignInForm</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: url("image/islamic\ background.avif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 1rem;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.2)
+        );
+        z-index: 1;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 400px;
+        padding: clamp(1.5rem, 5vw, 2.5rem);
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 2;
+      }
+
+      .signin {
+        text-align: right;
+        margin-bottom: clamp(1.5rem, 4vw, 2rem);
+      }
+
+      .signupase {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .signupase a {
+        color: #4caf50;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      .signupase a:hover {
+        color: #45a049;
+      }
+
+      .signinform h1 {
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
+        margin-bottom: clamp(0.8rem, 3vw, 1rem);
+        color: #fff;
+      }
+
+      .signinform p {
+        color: #ccc;
+        margin-bottom: clamp(0.8rem, 3vw, 1rem);
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .goggleapple {
+        display: flex;
+        gap: clamp(0.5rem, 2vw, 1rem);
+        margin-bottom: clamp(1.5rem, 4vw, 2rem);
+      }
+
+      .goggleapple button {
+        flex: 1;
+        padding: clamp(0.6rem, 2vw, 0.8rem);
+        border: none;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        transition: transform 0.2s, background 0.3s;
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+      }
+
+      .goggleapple button:hover {
+        transform: translateY(-2px);
+        background: #fff;
+      }
+
+      .login {
+        margin-top: clamp(1.5rem, 4vw, 2rem);
+      }
+
+      .email,
+      .pass {
+        position: relative;
+        margin-bottom: clamp(1rem, 3vw, 1.5rem);
+      }
+
+      .email i,
+      .pass i {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #666;
+        z-index: 2;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      input {
+        width: 100%;
+        padding: clamp(0.8rem, 2.5vw, 1rem) 1rem clamp(0.8rem, 2.5vw, 1rem)
+          2.5rem;
+        border: none;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        transition: background 0.3s, transform 0.2s;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      input:focus {
+        outline: none;
+        background: #fff;
+        transform: scale(1.02);
+      }
+
+      .submit {
+        width: 100%;
+        padding: clamp(0.8rem, 2.5vw, 1rem);
+        border: none;
+        border-radius: 10px;
+        background: #4caf50;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+
+      .submit:hover {
+        background: #45a049;
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 480px) {
+        .goggleapple {
+          flex-direction: column;
+        }
+
+        .container {
+          margin: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="right">
+        <div class="signin">
+          <p class="signupase">
+            Don't have an account? <a href="index.html">Sign UP</a>
+          </p>
+        </div>
+        <div class="signinform">
+          <h1>Sign in</h1>
+          <p>Sign in with</p>
+          <div class="goggleapple">
+            <button>
+              <img
+                src="image/google-icon.webp"
+                alt="Google icon"
+                width="20px"
+              />
+              <span>Google</span>
+            </button>
+            <button>
+              <i class="fa-brands fa-apple" style="color: #1f3e51"></i>
+              <span>Apple ID</span>
+            </button>
+          </div>
+          <div class="login">
+            <p>Or continue with email address</p>
+            <div class="email">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="text" name="email" id="email" placeholder="Email" />
+            </div>
+            <div class="pass">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                placeholder="Password"
+              />
+            </div>
+            <button class="submit">Sign In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
