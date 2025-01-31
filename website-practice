@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-website.css">
+  <title>Astra</title>
+</head>
+<body>
+
+<div class="nav">
+    <div class="logo">
+        <img src="image/logo_new.png" alt="logo">
+        <p>My first Website</p>
+    </div>
+    <div class="links">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">My account</a></li>
+            <img src="image/7067482_briefcase_bag_minimalis_icon.png" alt="bag">
+
+           
+        </ul>
+
+    </div>
+s
+</div>
+<div class="container">
+    <div class="left">
+        <p class="heading_left">Best Quality plants</p>
+        <p class="middle_text">
+            Amazing Variety Of Palnts Startting Just $6
+        </p>
+        <button>SHOP NOW</button>
+    </div>
+    <div class="right">
+        <img src="image/content.png" alt=" alovera">
+    </div>
+</div>
+
+</body>
+</html>

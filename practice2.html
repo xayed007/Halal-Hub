@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Practice</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      button{
+        padding: .5rem 2rem;
+        font-size: 18px;
+        border-radius: 8px;
+        border:none;
+        background-color: rgb(48, 121, 205);
+        color: white;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+
+      }
+      button:hover{
+        background-color: rgb(21, 112, 216) ;
+      }
+      #number{
+        font-size: larger;
+        color: blueviolet;
+        font-family: 'Roboto', sans-serif;
+
+      }
+    </style>
+  </head>
+  <p id="number">
+
+  </p>
+  <button>count</button>
+  </body>
+  <script>
+ if (!localStorage.getItem('countValue')) {
+      localStorage.setItem('countValue', 0);
+    }
+
+    document.querySelector('button').onclick = () => {
+      let countValue = parseInt(localStorage.getItem('countValue'));
+      countValue++;
+      document.querySelector('#number').textContent = countValue;
+      localStorage.setItem('countValue', countValue);
+    }
+  
+    document.querySelector('#number').textContent = localStorage.getItem('countValue');
+   
+    // const button = document.querySelector("#button");
+    // button.disabled = true;
+    // document.querySelector("#item").oninput = function () {
+    //   const value = document.querySelector("#item").value;
+    //   if (value.length > 0) {
+    //     button.disabled = false;
+    //   } else {
+    //     button.disabled = true;
+    //   }
+    // };
+    // document.querySelector("#button").onclick = (event) => {
+    //   event.preventDefault();
+
+    //   const value = document.querySelector("#item").value;
+    //   let li = document.createElement("li");
+    //   li.innerHTML = value;
+    //   let itemList = document.querySelector("#itemlist");
+    //   itemList.append(li);
+    //   document.querySelector("#item").value = "";
+    //   button.disabled = true;
+    // };
+   
+  </script>
+</html>
